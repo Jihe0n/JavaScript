@@ -39,8 +39,114 @@
 9. onkeypress="func(this.value)"  
     onkeypress는 사용자가 input에 입력할때마다 실행 하는 함수 this.value는 그 순간의 text안의 값
 
+10. 제어대상 찾기 
+    getElementsByTagName  // 태그 이름으로 검색
+    getElementsByClassName  // 클래스 이름으로 검색
+    getElementById // id값으로 검색 (id는 중복될 수 없음)
 
-10. innerText, innerHTML ??
+11. getElements는 말그대로 복수형(s) 이므로 유사배열에 담겨서 반환된다
+
+12. .textContent // 객체의 태그안에 text값을 반환
+
+13. querySelector // css처럼 선택자를 사용하여 입력을 받고 그 선택자에 해당하는 객체를 반환해줌
+    querySelector('셀렉터') // 대상 셀렉터를 정함, 여러개일 경우 먼저오는 한개만 리턴 
+    querySelectorAll('셀렉터')  /// 해당 셀렉터 를가진 모든 태그들을 배열로 가져와줌 ( 정확히는 노드리스트)
+
+
+14. jquery에서의 제어대상 찾기
+    '$' 는 jquery funtion 이라고 부르고 뒤에는 주로 css처럼 선택자가 오게되며 jquery 객체가 리턴됨
+    $('선택자').method('속성','값') // jquery객체의 메소드를 통해서 객체의 *모든* 엘리먼트에 메소드를 실행
+
+15. HTMLCollection // 리턴결과가 복수를 갖을때 갖는 객체 (유사배열)
+    찾은 제어대상이 하나의 엘리먼트가 아니라 여러 엘리먼트라면 HTMLCollection 타입을 갖게된다
+    *목록이 실시간으로 갱신된다* >> 만약에 제어대상을 찾고 HTMLCollection 객체가 만들어진 다음에
+    그에 맞는 태그가 삭제되거나 추가되어 변경되었다 해도 실시간으로 HTMLCollection에 반영된다
+
+16. jquery 객체의 특징 
+    대부분의 jquery 메소드들이 2개의 인자를 입력하면 속성을 값으로 설정하는 것이고 
+    두번째 인자없이 속성이라는 첫번째 인자만 입력하면 현재 그 속성 값을 가지고옴 
+    근데 설정할때는 모든 엘리먼트가 전부 설정되지만 가져올때는 맨처음 엘리먼트만 가져와짐
+
+17. jquery객체로 변환 
+    돔객체는 jQuery객체의 메소드를 사용할 수 없기때문에 $(dom_obj)를 통해 jquery객체로 변환하고
+    .css와 같은 jquery메소드를 사용할 수 있다 
+ 
+18. jquery.map(function(inx,elem){ }) // jquery의 map함수
+    파이썬의 매핑함수와 enum함수와 유사함 jquery객체의 모든값을 인덱스와 dom객체로 값을 주고 
+    크기만큼 돌면서 함수안의 내용을 매핑하는 함수 내부에서 jquery를 쓸려면 $(elem)으로 jquery객체로 바꿔줘야함
+
+19. Element 객체
+    getElements로 얻은 객체들은 HTML<TAG>Element 객체이고 얘는 HTMLElement을 상속하고 얘는 또 Element를 상속한다
+    따라서 모든 객체는 Element의 객체의 메소드를 사용할 수 있다.
+        <식별자 api>
+        .tagname // 변경 불가능
+        .id // 변경가능 
+        .className // 변경가능 
+        .classList // 기존의 className의 단점을 보완해서 유사배열로 클래스 리스트를 관리
+            classList의 domtoken은 add()와 remove() 메소드를 가지고있어서 쉽게 클래스 추가, 삭제 가능
+
+        <조회 api> // document.getElement는 문서전체지만, 검색의 범위를 특정 Element로 좁힐때 사용  
+        .getElementsBy* // 그 엘리먼트 하위에서 검색 
+
+        <속성 api>
+        .getAttribute('a') // a라는 속성의 값을 가져옴   
+        .setAttribute('a','b') // a라는 속성의 값을 b로 변경함    
+
+
+20. Element, attribute의 구분
+    <div class= ‘my-class’></div> 에서 
+    <div> -> Element // 태그는 엘리먼트라고 생각하자
+    class -> attribute
+
+21. property의 의미
+    html DOM 안에서 attribute 를 가리키는(혹은 대신하는) 표현, 참고로 Dom에서는 class는 className
+
+
+22. attribute vs property 
+    document.getElementsById('target')로 가져온 객체의 이름을 'target' 이라고 할때
+    target.setAttribute('class','newclass')와 같이 Attribute방식으로 class를 준 방법과
+    target.className = 'newclass'과 같이 객체의 프로퍼티 방식으로 class를 준 방법 
+    프로퍼티 방식이 더 짧고 간편하지만 JS의 예약어 때문에 class를 className으로 선언 해야하는 등
+    오류를 야기할 수 있기때문에 주의할 필요가 있음
+    결론으로 둘은 같은 동작을 하는 것같지만 속성제어시 다르게 동작하는 경우가 있음 
+    attribute 는 html 문서 안에서의 정적인(바뀌지 않는) 속성 그 자체를 의미하고, 
+    property 는 html DOM 안에서 동적인(바뀌는) 속성(또는 그 값)을 의미합니다.
+
+
+23. jQuery객체의 속성제어 
+    jquery_obj.attr('a') // jquery 객체의 a라는 속성을 가져옴 // dom의 getAttribute
+    jquery_obj.attr('a','b') // jquery 객체의 a라는 속성값을 b로 변경 // dom의 setAttribute
+
+
+24. jQuery에서도 attribute방식과 property방식을 구분해서 속성제어가 가능 
+    jquery_obj.attr('a') // attribute 방식으로 제어 
+    jquery_obj.prop('a') // property 방식으로 제어 
+
+25. jQuery 조회범위를 제한
+    $("#activ .marked").css("color","red")
+    $('#activ').find('.marked').css("color","red")
+    두 코드는 동일한 코드로 id="activ" 태그 하위에 class="marked"인 태그를 전부 선택하는 객체
+    즉 find는 앞의 객체의 하위에서 인자인 셀렉터를 검색한다는 의미
+
+
+
+
+
+
+
+
+
+
+
+
+
+    jQuery(document).ready(function($) {
+        이것의 의미
+    });
+
+
+
+. innerText, innerHTML ??
 
 
 
