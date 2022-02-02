@@ -217,6 +217,79 @@
 
 44. input type="text" 에서 value는 textfiled 안에 값을 말함, 초기값을 주면 처음에 박스안의 값 
 
+45. setTimeout과 setInterval // delay만큼 시간이 지나고 원하는 함수를 호출할 수 있게 하는 함수
+    setTimeout(func(), delay); // 1번만
+    setInterval(func(), delay); // 무한루프 
+
+46. 스크롤 제어 
+    window.scrollTo(x,y) // x,y좌표로 스크롤제어가 가능
+
+
+47. ** evnet 
+    말그대로 특정 이벤트를 했을때 ex) 버튼을클릭, 스크롤을내림, 텍스트필드값을 바꿨을때 등 
+    evnet target // 이벤트 대상이 되는 그 태그 
+    evnet type // onclick, onchange, onkeypress 등의 이벤트 종류
+    evnet handler // 이벤트가 발생했을때 실행할 코드 
+
+48. evnet handler 에서의 this 
+    이벤트 타겟인 그 태그를 가리킴 
+
+
+49. 이벤트를 등록 하는 프로퍼티 리스너 방식
+    엘리먼트 객체를 가져와서 evnet type에 해당하는 정의되있는 프로퍼티에 함수를 지정하는 것 
+    elem.onclick = function(){ }
+
+
+50. event 객체
+    버튼을 클릭하면 function안에있는 이벤트 헨들러가 호출이 되는데 그때, *브라우저는 이벤트가 발생하면 
+    첫번째 인자로 event 객체를 넘겨줌. 이 이벤트 객체에는 이벤트를 클릭했을 때의 정보들이 담겨있음
+    그래서 헨들러의 인자로 넘겨줄 수 있고, 49번 처럼 event 객체가 필요하지않으면 넘겨주지 않고 써도댐 
+    elem.onclick = function(evnet){ evnet.target }
+
+50. console.dir(obj)
+    인자로 들어온 obj 객체의 안에 있는 여러가지 프로퍼티를 콘솔에 나타냄 
+
+51. 삼항 연산자
+    (조건문) ? '참을때' : '거짓일때' 
+
+
+52. 이벤트를 등록하는 addEventListener 방식 
+    elem.addEventListener('event_type', function(event){ event ~~ })
+    가져온 객체에 addEventListener 프로퍼티를 주고 사용하려는 이벤트타입과 이벤트 리스너를 줌 
+
+
+53. 이벤트 등록할때 프로퍼티 를 직접주는 방식보다 addEventListener이 더 권장되는 이유 
+    전자는 단 하나의 이벤트 헨들러밖에 가지지 못함, 두개정의하면 전에것이 사라짐 
+    근데 addEventListener 말그대로 덮어씌우는 것이 아닌 add 하는 것이라 여러개 추가하여 순차적 이벤트가 발생함
+    그렇기때문에 한곳에서 이벤트 처리가 불가능할 수 있고 다른사람이 만든코드에 내가 이벤트를 추가할 수 도있고
+    그래서 addEventListener방식이 권장됨 
+
+
+
+54. jquery와 같은 라이브러리를 사용하는 이유는 크로스 브라우징과 같은 문제를 해결하기 위함도 있음
+    즉 브라우저간의 호환성을 보장하기 위해 
+
+
+55. capturing , bubbing // 이벤트 전파 캡쳐링은 밖에서안으로 버블링은 안에서 밖으로 
+    html은 부모자식으로 중첩되있고  태그에서 발생한 이벤트는 중첩이 된다 이러면 어떻게 처리가 될것인가?
+    이러한 순서에 대한 규약을 나타탬 
+    가장 상위태그에서 하위태그로 이벤트가 처리되는 캡쳐링은 잘 안쓰임
+    안쪽에서 부터 커진다는 의미 버블링 안쪽부터 이벤트가 처리가 됨 
+    버블링은 모든 브라우저에서 지원되고 기본값이 버블링이라서 거의 대부분의 경우에서 버블링을 씀
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -231,7 +304,7 @@
         이것의 의미
     });
 
-
+viewport 
 
 . innerText, innerHTML ??
 
