@@ -13,18 +13,43 @@
     <ul id="list">
         <li>java</li>
         <li>python</li>
-        <li>javascript</li>
+        <li>javascript
+            <ul>
+                <li>javascript1</li>
+                <li>javascript2</li>
+                <li>javascript3</li>
+            </ul>
+        </li>
     </ul>
 
-<blockquote></blockquote>
+    <a id="aa">first</a>
 
-<section></section>
+
+
     <script>
 
-    jQuery(document).ready(function($) {
-        
-    });
+   
+    function wake(target, callback) {
+        if(target.nodeType === 1){
 
+        
+        callback(target)
+        var lst = target.childNodes  // [text, li, text, li, text, li, text]
+        // for(idx in lst){
+        //     wake(lst[idx],callback) // text, callback
+        // }
+        for(var i=0; i<lst.length; i++){
+            wake(lst[i],callback)
+        }
+    }
+    }
+
+    wake(document.getElementById("list"), function(elem){
+        console.log(elem.textContent);
+    })
+
+    
+    
     </script>
 
 

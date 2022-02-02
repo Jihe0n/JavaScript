@@ -44,6 +44,9 @@
     getElementsByClassName  // 클래스 이름으로 검색
     getElementById // id값으로 검색 (id는 중복될 수 없음)
 
+10.1 객체 스타일 쉽게 바꾸기
+    getElementById('').style.color='red'    
+
 11. getElements는 말그대로 복수형(s) 이므로 유사배열에 담겨서 반환된다
 
 12. .textContent // 객체의 태그안에 text값을 반환
@@ -127,6 +130,72 @@
     $('#activ').find('.marked').css("color","red")
     두 코드는 동일한 코드로 id="activ" 태그 하위에 class="marked"인 태그를 전부 선택하는 객체
     즉 find는 앞의 객체의 하위에서 인자인 셀렉터를 검색한다는 의미
+
+
+26. node 객체
+    dom객체의 시조이며 html의 모든 객체의 뿌리
+    각각의 구성요소간의 자식, 형제 등의 관계를 나타내거나 각 노드의 종류, 값등을 정의하는 api
+
+
+27. node 타입
+    일반적인 태그는 Element 타입 노드이고, 문자와 같은 값은 text 타입 노드 라고 함
+    줄바꿈, 공백과 같은 것도 엄연히 하나의 text타입 노드임
+
+
+28. node 객체에서 <관계>를 나타내는 메소드
+    obj.firstChild // 하위 노드에서 바로 다음에 오는 노드로 이동 , text타입 주의 
+    obj.firstElementChild  // 말그대로 하위노드에서 text등을 제외한 엘리먼트 노드로 이동 
+    obj.parentNode // 부모 노드로 이동 
+    obj.childNodes // 하위객체의 모든 node를 찾아줌 
+    모든 엘리먼트, 텍스트, 주석 등 즉 html의 모든 구성요소의 객체는 공통적으로 node객체를 상속하기 때문에 
+    firstChild, nextcibling, parentNode 등의 프로퍼티를 사용할 수 있다.
+
+
+29. nodeType, nodeName // 필요한 노드를 필터링 할때 유용
+    Element node = 1 , text node = 3 등의 이미 정해진 상수가 있고 (숫자에 해당하는 텍스트로도 가능)
+    정해진 숫자를 통해서 그 Element가 어떠한 타입의 노드인지 체크하는 메소드  
+    nodeName은 a태그는 'A', body태그는 'BODY' 등으로 노드의 이름을 반환 
+
+30. node 추가, 삭제의 방법 
+    노드를 추가하는 건 node단 에서 하지만 노드를 추가할 엘리먼트를 생성하고 node를 추가해야 하기때문에
+    document단에서 먼저 Element를 생성하여 노드를 추가한다
+    ** 결국 추가하려는 노드를 생성할때 노드객체가 아니라 document 객체를 사용해야 한다 
+
+
+31. target = document.createElement("a") // a라는 엘리먼트 생성
+    단순 태그만 만든상태이므로 <a></a> 인 비어있는상태
+
+32. content = document.createTextNode("hello") // "hello" 라는 텍스트 노드를 만든 것 
+
+33. target.appendChild(content) // content를 target의 하위 노드로 결합  
+    target으로 만든 a태그안에 textnode를 넣어서 <a>hello</a> 를 만듬
+    참고로 appendChild를 기존 태그에 추가할 경우 형제들 중에서 제일 끝에 추가가 됨 
+
+34. obj.insertBefore(elem1, elem2)
+    앞의 appendChild는 맨뒤에만 추가하는 것이 명확하지만 때에 따라서 맨앞이나 중간에 끼우고 싶기때문에 사용 
+    elem1을 elem2의 바로 앞에다가 추가한다 
+
+35. 노드 삭제 
+    노드의 삭제는 그 엘리먼트를 직접 접근해서 삭제할 수 없고 그 엘리먼트의 부모 노드의 접근해서
+    부모노드의 자식으로써 삭제해야한다 
+    target.parentNode.removeChild('target')
+    그래서 삭제하려는 대상을 알고있어도 부모까지 알고있어야 삭제할 수 있는 설계상의 문제점이 있음
+
+36. 노드 교체
+    교체도 마찬가지로 교체하려는 엘리먼트를 document에서 생성하여 원하는 속성을 주고
+    target.replaceChild(obj1, obj2) // obj1을 ~의 child 와같은 obj2의 위치로 교체
+    
+     
+
+
+
+
+
+
+
+
+
+
 
 
 
