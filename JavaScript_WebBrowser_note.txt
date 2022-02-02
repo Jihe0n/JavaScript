@@ -184,20 +184,38 @@
 36. 노드 교체
     교체도 마찬가지로 교체하려는 엘리먼트를 document에서 생성하여 원하는 속성을 주고
     target.replaceChild(obj1, obj2) // obj1을 ~의 child 와같은 obj2의 위치로 교체
-    
-     
 
+37. jquery의 node 추가
+        // 여기서 elem은 직접 '<h1>HelloWorld</h1>' 이런식으로 직접 줘도 됨
+           그리고 selecter로 선택된 모든대상에 다 적용됨
+    $('selecter').before("elem") // 객체 태그 시작 바로전 위치 
+    $('selecter').prepend("elem") // 객체 태그가 열리고 바르 다음 위치
+    $('selecter').append("elem") // 객체 태그가 닫히기 바로전 위치
+    $('selecter').after("elem") // 객체 태그가 닫히고 바로 다음 위치
 
+38. jquery의 node 삭제
+    $("selecter").remove() // 객체 전체를 삭제
+    $("selecter").empty() // 안의 내용, 즉 텍스트 부분만 삭제
 
+39. jquery의 node 교체 
+    replaceAll, replaceWith
 
+40. document 객체
+    html문서 전체를 대표하는 객체이자 노드로써 하위 노드로 <!DOCTYPE html>, <html></html>을
+    자식으로 갖는걸 보아 문서전체를 대표하는 객체이다
+    createElement, createTextNode등으로 노드를 생성하거나, title, url 등 문서정보 관련된 프로퍼티가 있다
 
+41. text객체 
+    코드에서 태그안쪽에있는 <p>HelloWorld</p>와 같은 안쪽에 있는 객체를 text객체라고 함 
+    결국 html문서에서 실제 데이터를 담고있는 객체
 
+42. text객체의 값찾기 or 값변경
+    text_obj.data  
+    text_obj.nodeValue 
 
+43. 엘리먼트 내에서 firstChild를 하면 그안쪽에 있는 text node를 선택하게됨
 
-
-
-
-
+44. input type="text" 에서 value는 textfiled 안에 값을 말함, 초기값을 주면 처음에 박스안의 값 
 
 
 
@@ -218,10 +236,9 @@
 . innerText, innerHTML ??
 
 
+이벤트 헨들러 
 
-
-
-
+toString
 
 
 

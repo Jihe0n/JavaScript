@@ -23,7 +23,7 @@
     </ul>
 
     <a id="aa">first</a>
-
+    <input type="button"value="버튼" onclick="cl()">
 
 
     <script>
@@ -44,10 +44,9 @@
     }
     }
 
-    wake(document.getElementById("list"), function(elem){
-        console.log(elem.textContent);
-    })
-
+    function cl(){
+        $("#aa").after("<div>hello afet</div>")
+    }
     
     
     </script>
