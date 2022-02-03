@@ -277,6 +277,52 @@
     안쪽에서 부터 커진다는 의미 버블링 안쪽부터 이벤트가 처리가 됨 
     버블링은 모든 브라우저에서 지원되고 기본값이 버블링이라서 거의 대부분의 경우에서 버블링을 씀
 
+56. 기본이벤트 동작 취소
+    빈칸으로 submit 하기 등 어떤 조건을 채우지 못했을때는 이벤트를 발생하면 안되게 해야하는 상황이 있을 수 있다. 
+    a태그를 누르면 href로 이동 이라던지, submit은 누르면 url로 데이터를 보낸다던지 하는 것은
+    브라우저에서 기본적으로 동작하는 이벤트인데 이벤트 리스너를 return false를 주면 동작하지않게 할 수 있다.
+    addEventListener 방식에서는 event.preventDefault()로 취소함
+
+57. change 이벤트
+    사용자가 input text등에 사용 되면 사용자가 입력할때 마다가 아니라 
+    입력을 다 끝내고 다른곳을 클릭하여 포커싱이 해제되었을때 동작하는 이벤트
+    특이한점은 이벤트가 동작할때 그전과 value 값이 같다면 동작하지않음 
+
+58. blur, focus  이벤트
+    focus는 그 태그에 포커스가 맞춰졌을때 동작하고 
+    blur는 반대로 포커스가 벗어났을때 동작 
+
+59. event.target.value  
+    사용자가 input에 텍스트를 입력하고 이벤트가 발생했을때 event객체의 target.value 를 사용하여 
+    그 input창 안의 value값을 쉽게 가져올 수 있다.
+
+60. 문서 로드 이벤트
+    window.addEventListener('load', function(){}) 모든 load를 마치고 나서 function을 실행함  
+    window.addEventListener('DOMContentLoaded', function(){}) 방식은 만약에 엄청나게큰 이미지 같은 것때문에
+    로드가 지연되서 사용자가 기다리는 경우가 발생하지 않게 DOM과 관련된 태그들이 전부 로드가 되면 
+    나머지는 기다리지않고 먼저 실행되는 이벤트 
+
+61. jquery.on // jquery에서 event와 관련된 가장 중요한 api
+    $('selecter').on('event_type',[selecter], handler )
+    on안에있는 [selecter]는 생략이 가능한 것이고 ','로 여러개 사용 가능 
+    또한 이벤트핸들러 함수 내부에서 this를 사용하면 $()가 아닌 on()안에서의 selecter를 가리킴 
+
+62. jquery.on()의 [selecter]옵션의 재밌는 기능
+    late binding이 가능함 >> 처음에 $("selecter")로 jquery 함수를 통해서 객체를 가져올때는 반드시 이미 
+    존재하는 객체로써 가져올 수 있지만 뒤에 on()안에 있는 selecter로는 예약이 가능함 
+    그래서 늦은 연결을 함으로써 아직 정의되지 않은 하위태그가 나중에 생성되면 이벤트를 걸 수 있음 
+
+63. jquery.on의 이벤트 타입 등록
+    $('selecter').on('a1 a2', handler) // a1 a2 처럼 한칸 공백으로 다중 이벤트가 등록 가능 
+    이게 아니라면 on을 두번 정의 해야함  
+
+
+64. jquery의 요소의 내부 변경 
+    $('selecter').html() // 해당 요소의 HTML 콘텐츠를 반환하거나 설정한다.
+    $('selecter').text() // 해당 요소의 텍스트 콘텐츠를 반환하거나 설정한다.
+
+    ex) $("p").html("<div class='wrap'>html입니다.</div>");
+    >> p태그를 선택해서 그 전체를 html()안의 값으로 바꿔버림 // .text()도 비슷하지만 태그안 text만
 
 
 
@@ -291,13 +337,7 @@
 
 
 
-
-
-
-
-
-
-
+jquery.html() ?? 태그?
 
 
     jQuery(document).ready(function($) {
@@ -306,7 +346,7 @@
 
 viewport 
 
-. innerText, innerHTML ??
+. innerText, innerHTML ?? textContent?
 
 
 이벤트 헨들러 
