@@ -249,8 +249,7 @@
 50. console.dir(obj)
     인자로 들어온 obj 객체의 안에 있는 여러가지 프로퍼티를 콘솔에 나타냄 
 
-51. 삼항 연산자
-    (조건문) ? '참을때' : '거짓일때' 
+51. 
 
 
 52. 이벤트를 등록하는 addEventListener 방식 
@@ -358,26 +357,24 @@
         }
     })
 
+70. 크롤링 
+    querySelectorAll('셀렉터') 를 셀렉터를 구체적으로 줘서 원하는 태그를 다 가져오자 
 
+71. innerText 
+    객체의 태그안에 들어있는 실제 보여지는 정보 
 
-
-
-
-jquery.html() ?? 태그?
-
-
-    jQuery(document).ready(function($) {
-        이것의 의미
+72.   jQuery(document).ready(function($) {
     });
+    브라우저가 웹문서를 읽기시작한 순간 DOM객체가 생생되고 
+    그때 DOM이 생성되면서 ready메소드가 실행 되고 이함수 안에 있는 로직이 실행됨 
+    ex) 시작하면서 모든 체크박스 전체 해제 할때 이 안에 써야됨 
 
-viewport 
-
-. innerText, innerHTML ?? textContent?
 
 
-이벤트 헨들러 
 
-toString
+
+
+
 
 
 

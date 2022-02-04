@@ -151,27 +151,52 @@
 
 
 
-
-현실의 문제를 극복하기 위해서 공부를 한다
-
-
-
-
-
+34. 화살표 함수(Arrow function) // ES6 이상 
+    var foo = () => console.log('bar'); // 매개변수가 없는경우
+    var foo = x => x;  // 매개변수가 있는경우
+    var foo = (a, b) => a + b; // 매개변수 2개이상
+    var foo = (a, b) => { return a + b };  // 대괄호({})를 사용하면 여러줄로 쓸수있지만 return을 줘야댐 
 
 
 
+35. 문자열을 숫자로 바꾸는 방법 
+    Number() // 숫자가 아닌것이 들어오면 NaN
+    parseInt() // 숫자+문자 의 경우 숫자가 끝날때 까지만 잘라서 int로 변환, 숫자가 아니면 Number랑 같음
+
+
+36. 숫자를 문자열로 바꾸는 방법
+    String(123) => '123'
+    (123).toString() => '123'   
+
+37. 삼항 연산자
+    (조건문) ? '참을때' : '거짓일때' 
+
+38. <script asyn // 파싱과 js 다운로드를 병렬로 처리함 > 시간절약이 되지만, 전부 파싱되기전에 js가 실행될수있음
+    <script defer // 가장 좋은 옵션 > 다운로드는 병렬로 하고 파싱이 다 된다음에 js 실행
 
 
 
 
 
 
-. 생활코딩 자바스크립트 사전 https://opentutorials.org/course/50/37
 
 
+
+
+
+
+
+
+
+
+viewport 
+
+toString
+
+const let var 
 
  
+
 
 
 
