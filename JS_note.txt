@@ -368,6 +368,42 @@
 68. 에러 만들기
     throw Error("error message"); // 일부러 에러를 만들 수 있다. 보통 예외처리랑 같이씀
 
+69. key와 value의 값이 동일하면 한개로 생략가능
+    function re(name, age){
+        return{
+            name, // name = name
+            age  //  age = age
+        }
+    }
+
+70. 간단하게 객체의 key 확인하기
+    'key' in obj // 띄어쓰기로 구분 key가 obj에 들어있다면 true 반환 
+    "in" 이라는 키워드는 여기서도 그렇고 for문에서도 그렇고 객체와 관련이 있는듯
+
+71. array_name.forEach() // for .. of 랑 같은 역활 
+    간단하게 배열을 출력하는 함수로 콜백함수로 반복문이 돌면서 실행됨 
+    콜백함수로의 인자로는 배열의 value값, 인덱스값, array 자체를 줄수있고 전부 생략 가능한 인자임 
+    array.forEach((value, indx) => {  // 주로 array값은 잘 안씀 
+        console.log(value, indx);
+    });
+    
+72. 배열의 값 바꾸기  
+    arr.push("value") // 맨뒤에 넣기
+    arr.pop() // 맨뒤에서 하나 빼기, 이때 그 빼온값을 리턴해줌 
+    arr.unshift("value") // // 맨앞부터 넣기
+    arr.shift() // 맨앞에 하나 빼기, 이때 그빼온값을 리턴해줌 
+    ※근데 unshift, shift는 배열전체가 움직여야되서 굉장히 느리고 가능한한 안쓰는게 좋음
+    arry.sprice(a,b,c?) // 인덱스위치a 에있는 값을 b개 만큼 지울거야 // 없앤다음 그자리에 c 문자열을 추가할 수 있음   
+
+73. 배열합치기
+    let array3 = array1.concat(array2) // array1과 array2를 합침  
+
+74. 배열에서 값으로 인덱스 찾기
+    array.indexOf(value) // value가 array배열의 몇번째 인덱스인지 알려줌 >> 근데 없으면 -1 반환, 여러개면 첫번째만
+    array.lastIndexOf(value) // 똑같은데 마지막 놈만 알려줌  
+
+75. 배열의 값찾기 
+    array.includes(value) // value가 array안에 있냐? 있으면 true반환 
 
 
 
@@ -376,17 +412,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+제네릭? 
 
 viewport 
 

@@ -63,10 +63,19 @@ a.print()
 console.log(a.a);
 
 
-function err(value){
-    if(value == 3){
-        throw Error("3이면 에러야");
-    }else{
-        console.log(value);
+function re(name, age){
+    return{
+        name,
+        age
     }
 }
+
+
+console.log(re("tomato",30));
+
+let lst = ['💙', '🧡','💚']
+
+lst.forEach((value, indx, arr) => {
+    console.log(value, indx, arr);
+});
+
