@@ -217,9 +217,7 @@
 
 44. input type="text" 에서 value는 textfiled 안에 값을 말함, 초기값을 주면 처음에 박스안의 값 
 
-45. setTimeout과 setInterval // delay만큼 시간이 지나고 원하는 함수를 호출할 수 있게 하는 함수
-    setTimeout(func(), delay); // 1번만
-    setInterval(func(), delay); // 무한루프 
+45.
 
 46. 스크롤 제어 
     window.scrollTo(x,y) // x,y좌표로 스크롤제어가 가능
@@ -326,13 +324,10 @@
 
 65. 
 
+66.
 
-66. JSON포맷의 문자열 -> javascript 객체
-    jSON.parse(str) // 여기서 str은 JSON 포맷을 하고있는 문자열 
-    이러면 리턴값은 자바스크립트의 객체로써 사용할 수 있다.
+67.
 
-67. javascript 객체 -> JSON포맷 문자열 
-    JSON.stringify(obj) // 자바스크립트의 객체를 인자로 jSON포맷 문자열로 바꿔줌 
 
 68. string.split() // 문자열 쪼개기 
     split의 인자값으로 문자열을 배열로 쪼갬, 인자안주면 모두 하나씩 쪼갬 

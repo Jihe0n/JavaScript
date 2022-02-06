@@ -32,50 +32,44 @@
 // }
 
 
-class Person {
+// class Person {
 
-    #a = 13
+//     #a = 13
 
-    constructor(name, age){ // 생성자 
-        this.name = name;
-        this.age = age; // a.age = 20 
-    }
+//     constructor(name, age){ // 생성자 
+//         this.name = name;
+//         this.age = age; // a.age = 20 
+//     }
 
-    print(){
-        console.log(`이름은 : ${this.name} 나이는 : ${this.age}`);
-    }
+//     print(){
+//         console.log(`이름은 : ${this.name} 나이는 : ${this.age}`);
+//     }
     
-    get age(){
-        return this.private_age 
-    }
+//     get age(){
+//         return this.private_age 
+//     }
 
-    set age(value){
+//     set age(value){
         
-        this.private_age = (value < 0)? 0: value
+//         this.private_age = (value < 0)? 0: value
 
-    }
+//     }
 
    
+// }
+
+// const a = new Person("tomato",-20);
+// a.print()
+// console.log(a.a);
+
+
+// function re(name, age){
+//     return{
+//         name,
+//         age
+//     }
+// }
+
+function test(a,b,c,d){
+
 }
-
-const a = new Person("tomato",-20);
-a.print()
-console.log(a.a);
-
-
-function re(name, age){
-    return{
-        name,
-        age
-    }
-}
-
-
-console.log(re("tomato",30));
-
-let lst = ['💙', '🧡','💚']
-
-lst.forEach((value, indx, arr) => {
-    console.log(value, indx, arr);
-});
-
