@@ -69,7 +69,11 @@
 //         age
 //     }
 // }
-
-function test(a,b,c,d){
-
-}
+// producer
+let promise = new Promise((resolve,reject)=>{
+    // heavy work(network, file read)
+    resolve("hello");
+})
+// consumers
+promise 
+.then(value => {logic}).tnen
