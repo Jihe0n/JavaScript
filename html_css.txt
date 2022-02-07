@@ -19,15 +19,39 @@
 
 
 6. <label> 태그
+    주로 input 하고 같이 쓰임 이 입력이 어떤 입력인지 설명해줘서 
     주로 폼의 양식에 이름 붙이는 태그로 주요 속성은 for입니다.
     label의 for의 값과 양식의 id의 값이 같으면 연결됩니다.
     label을 클릭하면, 연결된 양식에 입력할 수 있도록 하거나 체크를 하거나 체크를 해제합니다    
 
 
+.p 문단을 나누는 태그
+
+. ol ul li
+orderlist, unorderlist, list 
+
+. content 
+. nav 
+. aside 
+
+. section 
+
+. article 
+    재사용 가능한 애들을 묶어 놓은 것  
+
+
+block inline
+한줄에하나 / 공간이 허용하면 다른태그 옆에 들어갈수 있음
+
+
+
+viewport  ??
+
+
+<appple /> // 바로닫기
 
 
 
 
 
-resolve // 해결하다
-reject // 거부하다
+

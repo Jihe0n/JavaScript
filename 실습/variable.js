@@ -70,10 +70,22 @@
 //     }
 // }
 // producer
-let promise = new Promise((resolve,reject)=>{
-    // heavy work(network, file read)
-    resolve("hello");
-})
-// consumers
-promise 
-.then(value => {logic}).tnen
+
+class Test {
+
+    constructor(ver, func){
+        this.ver = ver;
+        this.func = func;
+    }
+
+    print(){
+        console.log(this.func());
+    }
+}
+
+function inner(){
+    console.log("print inner");
+}
+
+let obj = new Test(10,inner)
+obj.print()
