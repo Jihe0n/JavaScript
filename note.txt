@@ -1,0 +1,21 @@
+
+vscode 단축키 
+
+커맨드 팔렛트  ctrl + shift + p
+퀵 오픈 ctrl + p 
+설정 // ctrl + , 
+번역기 // ctrl + shift + t 
+shift를 누른상태로 방향키로 선택을 늘릴수 있는데, 이때 ctrl로 단어씩 끊어서 선택하면 편함
+바로 다음줄 맨앞으로 가기 // ctrl + enter 
+
+
+
+
+
+
+
+사이트 
+
+웹에서 html css js 하기 // jsbin.com
+CSS Selector 게임 // https://flukeout.github.io/
+Flexbox 게임 // https://flexboxfroggy.com/#ko

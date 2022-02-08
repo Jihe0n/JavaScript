@@ -74,6 +74,8 @@
 class Test {
 
     constructor(ver, func){
+
+        
         this.ver = ver;
         this.func = func;
     }
@@ -89,3 +91,7 @@ function inner(){
 
 let obj = new Test(10,inner)
 obj.print()
+
+
+
+

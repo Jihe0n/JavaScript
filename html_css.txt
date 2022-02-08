@@ -40,16 +40,11 @@ orderlist, unorderlist, list
     재사용 가능한 애들을 묶어 놓은 것  
 
 
-block inline
-한줄에하나 / 공간이 허용하면 다른태그 옆에 들어갈수 있음
-
-
 
 viewport  ??
 
 
 <appple /> // 바로닫기
-
 
 
 

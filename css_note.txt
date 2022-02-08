@@ -24,4 +24,48 @@
 
 8. 셀렉터 div:empty // 비어있는 div태그 전부다 선택
 
-9. 
+9. display 
+    // block, inline, inline-bock 
+    1. block은 한줄에하나인 상자 // 대표적인 div 
+    2. inline은 css를 무시하고 안의 내용물에 크기에 맞게 자기 크기가 결정됨 그리고
+        공간이 허용하면 다른태그 옆에 들어갈수 있음 // 대표적인 span
+    3. inline-block은 둘의 특성을 다 가져온건데 block지만 inline 처럼 크기가 맞으면 한줄에 여러개가 들어감
+
+10. position 
+    css에서 초기값을 static 으로 해놓음
+    relative // 원래위치에서 상대적 이동
+    absolute // 나의 직계부모 태그를 기준으로 상대적 이동 
+    fixed // 완전히 벗어나서 페이지 기준으로 상대적 이동 
+    sticky // 원래 자리에 그대로 있고, 스크롤링 해도 그자리에 있는것 
+
+11. Flexbox  // css의 꽃
+    특징1. container의 속성과 item의 속성이 존재
+    특징2. 메인축과 반대축이 존재 
+
+    container 속성 
+        display: flex // 너는 이제 Flexbox야 
+        flex-direction: row // 기본값 row ->, row-reverse <-, colume ↓, colume-reverse ↑
+            메인축을 어떻게 설정할 것인지 
+        flex-wrap: nowrap // 기본값 nowrap 으로 Flexbox를 래핑을 할거야? 
+            nowrap은 브라우저 크기에 상관없이 무조건 한줄에다붙여. wrap은 한줄에 꽉차면 다음줄로 넘어감
+        justfy-content: // 중심축에서 item들을 어떻게 배치할 것 인지?
+        align-content: // 중심축의 반대축에서 어떻게 배치할 거야?
+            flex-start // 초기값으로 설정됨 // 축방향의 시작점에서 부터 시작 
+            flex-end // 축방향의 끝방향으로 끝나게 
+            center // 중앙 
+            space-around // 아이템에 space를 씌움 
+            space-evenly // 전부다 같은 간격 
+            space-between // 양쪽끝은 축에딱 붙게하고 나머지 같은간격 
+        
+
+
+    item 속성 
+        flex-grow: // item들이 원래 크기를 유지하는데 grow를 주면 부모에 따라 크기가 따라 늘어남
+        flex-shrink // item들이 부모의 사이즈가 작아질때 얼마나 줄어들지 
+        flex-basis // 위에 두개를 그냥 묶어서 부모의 %로 정의 
+
+            
+
+
+
+
