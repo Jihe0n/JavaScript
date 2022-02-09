@@ -71,27 +71,25 @@
 // }
 // producer
 
-class Test {
-
-    constructor(ver, func){
-
-        
-        this.ver = ver;
-        this.func = func;
-    }
-
-    print(){
-        console.log(this.func());
-    }
+const obj =  {
+    name:"heon",
+    age:"20",
 }
 
-function inner(){
-    console.log("print inner");
+const obj2 =  {
+    name1:"heon2",
+    age2:"202",
 }
 
-let obj = new Test(10,inner)
-obj.print()
+const obj3 = {...obj, ...obj2}
 
+console.log(obj3);
+
+// 🍙
+const isOnigiri = true 
+
+const contnet = isOnigiri ? "🍙":"💛"
+console.log(contnet);
 
 
 
