@@ -1,6 +1,6 @@
 1. 셀렉터에서 상태를 나타낼때는 콜론(:)을 사용  
-    ex) button:hover { // 버튼에 마우스를 올렸을때 
-    }
+    ex) button:hover  // 버튼에 마우스를 올렸을때 
+    a:link, a:visited, a:active 등  
 
 2. 셀렉터에서 속성을 나타낼 때는 소괄호([]) 사용 
     ex) a[href]{ a태그에 href 속성이 있는 태그
@@ -32,13 +32,15 @@
     3. inline-block은 둘의 특성을 다 가져온건데 block지만 inline 처럼 크기가 맞으면 한줄에 여러개가 들어감
 
 10. position 
-    css에서 초기값을 static 으로 해놓음
-    relative // 원래위치에서 상대적 이동
-    absolute // 나의 직계부모 태그를 기준으로 상대적 이동 
-    fixed // 완전히 벗어나서 페이지 기준으로 상대적 이동 
-    sticky // 원래 자리에 그대로 있고, 스크롤링 해도 그자리에 있는것 
+    css에서 초기값을 static 으로 해놓음 >> offset값을 무시하고 그냥 자기위치에 정적으로 위치 
+        offset이란 > left, right, top, botton 
+    relative // 원래위치에서 상대적 이동 (상대위치)
+    absolute // 나의 직계부모 태그를 기준으로 상대적 이동 (포지션이 지정된 부모로 부터 절대위치)
+    fixed // 완전히 벗어나서 페이지 기준으로 상대적 이동  (절대위치) // 스크롤을 움직여도 그대로임 
+    sticky //  sticky 영역의 x 또는 y 위치값이 설정한 위치에 도달하기 전까지는 static, 
+               도달 이후에는 fixed처럼 행동
 
-11. Flexbox  // css의 꽃
+11. Flexbox  // css의 꽃 >> 레이아웃
     특징1. container의 속성과 item의 속성이 존재
     특징2. 메인축과 반대축이 존재 
 
@@ -65,6 +67,40 @@
         flex-basis // 위에 두개를 그냥 묶어서 부모의 %로 정의 
 
             
+
+12. em vs rem 
+    rem을 쓰면 부모의 폰트 사이즈에 관계없이 페이지 어디에서 쓰이던 고정한 값을 가진다
+    rem의 r은 root를 뜻하며 브라우저의 기본 사이즈 16px를 1rem으로 계산됨 
+    나의 component가 페이지 어디에서 사용되던 그대로 고정되야 한다면 rem
+
+    em은 부모의 폰트 사이즈에 따라 상대적으로 변함 %와 굉장히 흡사함
+    내 component가 어디에서 사용되냐에 따라서 유동적으로 변해야한다면 em 
+
+    em, rem은 값이 유동적이긴 하지만 결국 폰트사이즈에 따라 변하기 때문에 일반적으로 고정적인 값을 가짐
+    그렇기 때문에 contents를 물과같이 유동적으로 만들기 위해서는 %를 써야만 함 
+
+
+13. margin 겹침
+    1. 두 태그사이의 margin중에서 큰값이 두 태그사이의 거리가 된다
+        a태그의 margin과 b태그의 margin이 겹쳐져서 되지않음 
+    2. 부모와 자식의 margin 겹침 
+        부모 엘리먼트가 시각적인 요소가 없는 상태라면 부모자식중에 큰 마진값이 자식 태그의 마진으로 사용된다
+    
+
+
+align >> 현재 컨테이너의 정렬방식의 반대축 정렬방식
+justfy >> 현재 컨테이너의 정렬방식의 같은 축 정렬방식
+
+
+align-items
+align-content
+justfy-items
+justfy-content
+
+
+
+
+
 
 
 

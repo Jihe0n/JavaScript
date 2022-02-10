@@ -24,20 +24,92 @@
     label의 for의 값과 양식의 id의 값이 같으면 연결됩니다.
     label을 클릭하면, 연결된 양식에 입력할 수 있도록 하거나 체크를 하거나 체크를 해제합니다    
 
+7. <ol> <ul> <li> <dl>
+    <ol> orderlist // 순서가 있는 목록 
+    <ul> unorderlist // 순서가 없는 목록 
+    <li> list item // 목록안의 리스트 
+    <dl> description list // 무언가에 대한 설명이 묶여있는 목록 > 정의와 설명을 같이할때 
+        <dt> title // 제목 
+        <dd> detail // 내용 
+   
+
+8. Sementic Tag로 나누는 것이 중요 
+    <header> <nav> <main> <aside> <article> <section> <footer> 등으로 역활에 맞게 나누는 것이 중요함
+    왜냐하면 SEO를 위해, 웹접근성, 개발자 자신을위해  
+
+8. <article> 
+    이 자체로 독립적으로 다른페이지에 보여졌을때 전혀 문제없이 보여질 수 있는 
+    블로그 포스팅 한개, 신문기사 1개 등 main 안에서 다른애들과 상관없이 독립적으로 고유한 정보를 나타냄 
+
+9. <section>
+    이러한 article중에서 서로 연관있는 애들끼리 묶을때 사용할 수 있는것이 section
+
+10. <aside> 
+    main안에서 페이지의 content와 직접적으로 상관은 없는 부가적인 것이 담겨있는 것
+ 
+11. <i> , <em> // 이탤릭체 
+    i는 시각적으로 보여지기만 하는 이탤릭체 이고 
+    em은 강조하는 이탤릭체 (정말 강조하는 것이 있을때 사용) 
+    따라서 스크린 리더기로 읽을때 달라짐 
+
+12. <b> , <strong> // 볼드체
+    b는 시각적으로만 볼드체
+    strong은 강조하는 볼드체 
+
+13. <button> vs <a> 
+    클릭하여 이벤트가 발생하는 특정한 액션을 위한 것은 button태그
+    다른 링크를 주고 어딘가로 이동하는 경우는 a태그 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .p 문단을 나누는 태그
 
-. ol ul li
-orderlist, unorderlist, list 
+
 
 . content 
 . nav 
 . aside 
 
-. section 
 
-. article 
-    재사용 가능한 애들을 묶어 놓은 것  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

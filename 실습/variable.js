@@ -83,13 +83,14 @@ const obj2 =  {
 
 const obj3 = {...obj, ...obj2}
 
+
+
+
 console.log(obj3);
 
-// 🍙
-const isOnigiri = true 
+
+const isOnigiri = true // 🍙
 
 const contnet = isOnigiri ? "🍙":"💛"
 console.log(contnet);
-
-
 

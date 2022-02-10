@@ -610,7 +610,14 @@ ES6문법
 
 PRO TIPS 
 
-1. 
+1. nullish 
+    a ?? b // a가 null도 아니고 undefined도 아니면 a 그 외의 경우는 b
+    결국 a가 있으면 a를 쓰고 없으면 b를 쓰라는 의미
+    '??'와 '||'의 차이를 알아야됨 헷갈리지 말것 ??를 쓰는것이 무조건 좋다. 버그생김 
+    content = 0;
+    content || 100; // 0이 false로 처리되기 때문에 100이 나옴 
+    content ?? 100; // content가 정확히 null이나 undefined일 경우에만 100이 나옴 
+
 
 
 
