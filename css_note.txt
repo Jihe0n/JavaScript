@@ -71,8 +71,8 @@
             space-between // 양쪽끝은 축에딱 붙게하고 나머지 같은간격 
         
     item 속성 
-        flex-grow: // item들이 원래 크기를 유지하는데 grow를 주면 부모에 따라 크기가 따라 늘어남
-        flex-shrink // item들이 부모의 사이즈가 작아질때 얼마나 줄어들지 
+        flex-grow: // item들이 원래 크기를 유지하는데 grow를 주면 부모에 따라 크기가 따라 늘어남 // 기본값 0 
+        flex-shrink // item들이 부모의 사이즈가 작아질때 얼마나 줄어들지  // 기본값 1 
         flex-basis // 위에 두개를 그냥 묶어서 부모의 %로 정의 
 
             
@@ -122,8 +122,56 @@
 
 18. box-sizing 
     엘리먼트의 너비와 높이는  border를 포함한 눈에 보이는 크기가 아니라 실제 border를 제외한 content의 크기로
-    계산 되기때문에 계산 함에 있어 
+    계산 되기때문에 계산 함에 있어 힘들때가 있다.
+    box-sizing: content-box // 기본값 
+    box-sizing: border-box // 보더까지 해서 너비와 높이가 정의됨 >> 예측하기 쉬운 결과가 나옴
 
+
+19. filter 
+    이미지, 텍스트등 그래픽 대상에서 포토샵등고 같이
+    특수효과를 줄 수 있는 옵션
+
+
+20. background-size: cover , contain
+    cover는 이미지가 잘리더라도 부모 크기에 꽉차게 배경 이미지를 줌
+    contain은 빈칸이 나오더라도 원래 비율을 유지해서 보여줌  
+
+21. blend, transform 
+    굉장히 포토샵과 유사한 기능들 
+    blend >> 사진, 배경색 등을 섞어서 다양한 효과를 만듬
+    transform >> 이미지를 벡터, 좌표, 각도 등 여러가지로 돌리고 바꾸고 만드는 효과 
+
+
+22. 가상 선택자
+    별도의 class를 지정하지 않아도 지정한 것 처럼요소를 선택할 수 있다 >> 예를들면 첫번째 자식을 가져오는 
+    first-child를 하면 그 전체 element값에 대한 선택자로 사용할 수 있기때문  
+        :link - 방문한 적이 없는 링크
+        :visited - 방문한 적이 있는 링크
+        :hover - 요소에 마우스가 올라간 상태
+        :active - 마우스를 클릭했을 때
+        :focus - 포커스 되었을 때 (input 태그 등)
+        :first-child - 첫번째 자식
+        :last-child - 마지막 자식
+
+23. 가상 요소 
+    가상선택자 처럼 선택자에 추가되며, 존재하지 않는 요소를 존재하는 것처럼 부여하여 문서의 특정 부분 선택이 가능
+    ::brfore - 셀렉터로 선택한 엘리먼트 앞에 content 삽입
+    ::after  - 셀렉터로 선택한 엘리먼트 뒤에 content 삽입 
+    ※content는 ::before와 ::after를 쓸 땐 꼭 필요한 속성이며 가상요소임 
+    content 속성에는 HTML 태그의 속성 값을 가져오는 attr() 함수를 사용할 수 있다.
+
+
+
+
+
+
+
+24. trasition (장면전환)
+    css 속성을 변경할때 애니메이션 속도를 조절하는 방법
+    무언가를 변환하는데 딱 한번에 몇하는 것보다 시간을 정해놓으면 차차 변하면서 부드럽게 움직이는 효과를 줄 수 있음
+    trasition 속성 시간 으로 선언함 
+    ex) trasition font-size 1s // 선택된 태그에 대한 font-size에 대한 값이 바뀔때 1초 동안 변화가 진행됨
+     
 
 
 
