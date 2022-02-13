@@ -1,93 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script defer src="variable.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <style>
 
-/* row 좌->우 colume 위->아래 */
-/* justify  -> 축과 같은방향  
-   align  -> 축과 반대방향 
-    */
-        .container{
-           background: violet; 
-           display: flex;
-          
-           height: 500px;
-           flex-direction: column;
-           
-      
-        
-        }
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap"
+      rel="stylesheet"
+    />
 
-        .item1 {
-            background-color: tomato;
-            color: wheat;
-            font-size: xx-large;
-            width: 100px;
-            height: 100px;
-            border: 1px solid linen;
-            flex-shrink: 1;   
-            flex-basis: 60%;
-            align-self: flex-end;
-        }
+    <!-- font awesome   -->
+    <script
+      src="https://kit.fontawesome.com/365893c74e.js"
+      crossorigin="anonymous"
+    ></script>
 
-        .item2 {
-            background-color: yellowgreen;
-            color: wheat;
-            font-size: xx-large;
-            width: 100px;
-            height: 100px;
-            border: 1px solid linen;
-            flex-shrink: 1;   
-            flex-basis: 30%;
-            align-self: center;
+    <link rel="stylesheet" href="style.css" />
+    <script src="togle.js" defer></script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="logo">
+        <i class="fa-solid fa-building-columns"></i>
+        <a href="#">tonguri</a>
+      </div>
 
+      <ul class="nav">
+        <li><a href="#">javascript</a></li>
+        <li><a href="#">python</a></li>
+        <li><a href="#">django</a></li>
+        <li><a href="#">laravel</a></li>
+        <li><a href="#">html</a></li>
+      </ul>
 
-        }
+      <ul class="icon">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram-square"></i>
+      </ul>
 
-        .item3 {
-            background-color: powderblue;
-            color: wheat;
-            font-size: xx-large;
-            width: 100px;
-            height: 100px;
-            border: 1px solid linen;
-            flex-shrink: 1;   
-            flex-basis: 10%;
-
-        }
-
-
-
-
-
-
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <div class="item1">1</div>
-        <div class="item2">2</div>
-        <div class="item3">3</div>
-        <!-- <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div> -->
-        <!-- <div class="item">7</div>
-        <div class="item">8</div>
-        <div class="item">9</div>
-        <div class="item">10</div>
-        <div class="item">11</div>
-        <div class="item">12</div> -->
-
-    </div>
-
-
-
-</body>
+      <a href="#" class="btn">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+    </header>
+  </body>
 </html>

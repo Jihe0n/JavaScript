@@ -1,6 +1,89 @@
-.dd {
-  color: pink;
+:root {
+  --main_color: violet;
 }
 
-.atuo3 {
+body {
+  margin: 0;
+  /* font-family: 'Source Sans Pro', sans-serif; */
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(85, 36, 14);
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  color: white;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav li {
+  padding: 1rem;
+}
+
+.nav li:hover {
+  background-color: orange;
+  border-radius: 0.5rem;
+}
+
+.icon {
+  list-style: none;
+  padding: 1rem;
+}
+
+.icon i {
+  padding: 0.5rem;
+}
+
+.btn {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+  .logo {
+    width: 100%;
+    justify-content: end;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .nav li {
+    width: 100%;
+  }
+  .icon {
+    display: none;
+  }
+  .btn {
+    padding: 1rem;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    font-size: 2rem;
+    color: var(--main_color);
+  }
+
+  .nav.state,
+  .icon.state {
+    display: flex;
+  }
 }

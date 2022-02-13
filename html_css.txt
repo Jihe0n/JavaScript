@@ -64,6 +64,9 @@
     data-* 형식의 속성으로 
     data-name="", data-user="" 등으로 내가 커스텀하여서 사용할 수 있다.
 
+15. css의 link, import
+    경량화를한 다른 css로 부터 html에 불러올때 두가지 방법이 있는데
+    link는 head에서 이 css를 다운받는것 이고 @import는 style태그안에서 다른 css를 불러오는 것 
 
 
 
