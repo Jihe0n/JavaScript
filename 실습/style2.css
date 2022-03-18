@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: teal;
+}
+
+.logo a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.logo i {
+    color: red;
+}
+
+.logo {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.btn i {
+    margin-right: 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.outer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+}
+
+.inner {
+    background-color: tomato;
+    height: 100%;
+    width: 3rem;
+    transition-property: width, font-size;
+    transition-duration: 1.3s;
+}
